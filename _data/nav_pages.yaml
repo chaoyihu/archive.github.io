@@ -1,0 +1,14 @@
+docs_list_title: navbar_pages
+docs:
+
+- title: Home
+  url: /
+
+- title: Projects
+  url: /projects
+
+- title: Blogs
+  url: /blogs
+
+    #- title: Fun
+    #  url: /fun

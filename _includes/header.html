@@ -1,0 +1,25 @@
+<header class="site-header" role="banner" style="background-color: #e0e1e1;">
+
+  <div class="wrapper">
+    <p style="display: inline-block; margin-bottom: 0; padding-left: 30px; padding-right: 20px;">
+    <img src="/assets/images/logo.png" style="height:2em;vertical-align:middle;padding: 10px 10px 10px 10px;">
+    <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+    </p>
+
+    {%- assign nav_pages = site.data.nav_pages.docs -%}
+    {%- if nav_pages -%}
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+        </label>
+
+        <div class="trigger">
+          {%- for page in nav_pages -%}
+            <a class="page-link" href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>
+          {%- endfor -%}
+          <a class="page-link contact-link" href="mailto:{{ site.email }}">Contact</a>
+        </div>
+      </nav>
+    {%- endif -%}
+  </div>
+</header>

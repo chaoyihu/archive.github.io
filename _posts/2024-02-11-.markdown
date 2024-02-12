@@ -1,0 +1,12 @@
+---
+layout: post
+title: "Test Fun Post"
+date: 2024-02-11
+tags: [Lambda Calculus]
+categories: [fun]
+description: "Writes about everything."
+---
+
+# Hey
+
+This is a fun post about linguistics.

@@ -51,6 +51,9 @@ Ref: [How to create self-signed SSL TLS X.509 certificates using OpenSSL](https:
 
 ## Managing SSL certs using Docker Secrets with Docker Compose
 
+
+### Where to place the certificates
+
 I moved the certificates created in the previous section to a folder named secrets in my project directory. Below is the project structure. There are two services, `redis` for redis data storage and `web` for the Tornado web server.
 
 ```shell
@@ -74,7 +77,45 @@ project
     └── utils
 ```
 
-Next, I specified the secrets in docker compose file.
+Or actually, a common practice it to place the certs in `/etc/ssl/certs/` on your server machine.
+
+```shell
+project
+├── compose.yaml
+├── README.md
+├── redis        # redis database
+│   └── Dockerfile
+└── web          # the Tornado web server
+    ├── Dockerfile
+    ├── handlers
+    ├── requirements.txt
+    ├── server.py
+    ├── static
+    ├── templates
+    └── utils
+
+/etc/ssl/certs
+├── ...
+├── test.crt
+├── test.csr
+└── test.key
+```
+
+> 
+> **Should I add the secrets .dockerignore?**
+>
+> Docker compose builds images based on the context of the Dockerfile and its adjacent files instead of the project directory, thus my `secrets/` folder is not included in any image by default and does not need to be added to .dockerignore.
+> 
+> If the secrets folder is placed under any service directory, it should be added to .dockerignore.
+
+> **Reminder: Add secrets to .gitignore if it's placed in project directory**
+> ```shell
+> # .gitignore
+> **/secrets/*
+> ```
+
+
+### Configure secrets in compose.yaml and Dockerfile
 
 Refer to [this page](https://docs.docker.com/compose/use-secrets/) for details, but basically, the top-level `secrets` section defines secret variables with specified files as their values, the `secrets` attribute under the `web` service mean I want to inject the two secrets to that specific container:
 
@@ -96,9 +137,9 @@ services:
 
 secrets:
   ssl_certfile:
-    file: ./secrets/ssl_certs/test.crt
+    file: /etc/ssl/certs/test.crt
   ssl_keyfile:
-    file: ./secrets/ssl_certs/test.key
+    file: /etc/ssl/certs/test.key
 ```
 
 In Dockerfile for the tornado server, include the following environment variable. This is because for each container, Docker creates a temporary mount under /run/secrets/ for the injected secrets:
@@ -127,13 +168,7 @@ def main():
 
 ```
 
-> 
-> **NOTE**
-> Docker compose builds images based on the context of the Dockerfile and its adjacent files instead of the project directory, thus my `secrets/` folder is not automatically included in any image, and does not need to be added to .dockerignore. because it is not under any service directory. 
-> 
-> If the secrets folder is placed under any service directory, it should be added to .dockerignore.
-
-## File permissions of docker secrets when using docker compose
+### File permissions of docker secrets in docker compose
 
 As is suggested by [Docker Doc - Best Practices](https://docs.docker.com/develop/develop-images/instructions/#user), I was running my containers under a non-privileged user:
 
@@ -152,11 +187,13 @@ RUN adduser \
 USER appuser
 ```
 
-To make the certs readable, I changed file permissions on my local machine. Please note that this is not ideal, nor is running the container as a root user. See [dicussion](#using-one-node-docker-swarm).
+To make the certs readable, I changed file permissions on my local machine. Please note that this is not ideal, nor is it ideal to run the container as a root user. See [dicussion](#using-one-node-docker-swarm) on this.
 
 ```shell
-$ chmod 644 /run/secrets/*
+$ chmod 644 /etc/ssl/certs/test.*
 ```
+
+### Run the server and check the connection
 
 Finally, I ran the server using `docker compose up`, made sure the certs are in the expected folder by running `docker exec <server-container-id> ls /run/secrets/`, and visited `https://localhost` in chrome to check the connection.
 
@@ -164,13 +201,6 @@ As can be seen from the screenshot below, the server successfully accepted reque
 
 ![Show certificate](/assets/images/2024-02-10-https-localhost-443.png)
 
-
-Additional step: I added this folder to .gitignore, as I do not want secrets in my remote repo:
-
-```shell
-# .gitignore
-**/secrets/*
-```
 
 # Discussion
 

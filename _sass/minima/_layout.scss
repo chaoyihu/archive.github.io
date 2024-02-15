@@ -373,7 +373,32 @@
 }
 
 /* Custom - Projects */
-.project-item {
+#project-pane {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-row {
+  padding: 10px 10px 10px 10px;
+  width: 100%;
   display: flex;
   align-items: center;
+}
+
+.project-row:hover {
+  background-color: rgb(215, 235, 255);
+}
+
+.project-row img {
+  display: inline-block;
+  width: 60%;
+  height: auto;
+}
+
+.project-row p{
+  display: inline-block;
+}
+
+.project-headline-box {
+  padding: 0px 30px 0px 30px;
 }

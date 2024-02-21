@@ -21,8 +21,7 @@ With Sprinting, watch as your team transforms into a synchronized powerhouse. Cl
 progress sharing among team members, leveraging Python with Tornado web framework for backend
 development, JavaScript for responsive frontend interfaces, and Redis for efficient data storage.
 - Utilized Redis pub/sub for seamless team communication via instant messages.
-- Deployed the application using Docker on Amazon EC2, with SSL/TLS certificates properly configured to
-enable encrypted communication over HTTPS and secure web sockets.
+- Deployed the application using Docker on Amazon EC2.
 
 
 ## Walkthrough
@@ -53,5 +52,5 @@ Initiating the sprint will redirect you to the main event page. Event info is sh
 
 <!-- - Project Video: [Create a team sprint]() -->
 
-- Project Demo: [Sprinting](https://44.203.49.24/)
+- Project Demo: [Sprinting](http://44.203.49.24/)
 > You can use username: testuser and password: pwd to play with the demo, or register your own user.

@@ -27,7 +27,7 @@ title: Home
                 <li>password: pwd</li>
             </ul>
             <p><a href="/projects#sprinting-web-based-sprint-planning-and-collaboration">More Details>>></a></p><br>
-            <p><a href="https://44.203.49.24/" target="_blank">Visit Demo>>></a></p>
+            <p><a href="http://44.203.49.24/" target="_blank">Visit Demo>>></a></p>
         </div>
     </div>
 </div>

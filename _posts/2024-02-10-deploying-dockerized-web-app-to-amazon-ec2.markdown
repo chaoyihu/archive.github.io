@@ -181,7 +181,7 @@ And in the ssh terminal:
 
 Finally, run the app:
 ```shell
-[ec2-user@ip-private ~]$ docker-compose -f compose.yaml up
+[ec2-user@ip-private ~]$ docker-compose -f compose.yaml up -d
 ```
 
 Done! Visit https://public-ip to access the server running on the instance, and the application is running as expected.
@@ -194,10 +194,9 @@ The process is straight-forward. I only had a permission issue with the IAM role
 
 # To-Do
 
-The web application is running fine now on the instance! I am simply using the public IP of tyhe instance to access the application, and the ssl certs are still self-signed, but this is only temporary. Following steps will be completed and documented in a future post:
+The web application is running fine now on the instance! I am simply using the public IP of the instance to access the application, and the ssl certs are still self-signed, but this is only temporary. Following steps may be completed and documented in a future post:
 
+- Get a CA-signed SSL/TLS certificate to replace the self-signed certificate.
 - Set up Elastic IP for the instance.
-- Get a domain name and point it to the instance.
-- Apply for a CA-signed SSL/TLS certificate to replace the self-signed certificate.
 
 Thanks for reading! (•◡•)/

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Quick Note: Resetting an Unwanted Merge Commit in Git"
+title: "Resetting an Unwanted Merge Commit in Git"
 date: 2024-03-05
 tags: [Git]
 categories: [developer]

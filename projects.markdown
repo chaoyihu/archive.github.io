@@ -17,9 +17,7 @@ With Sprinting, watch as your team transforms into a synchronized powerhouse. Cl
 
 ## Highlights
 
-- Designed and built a dynamic web application to streamline sprint planning, sprint events hosting and
-progress sharing among team members, leveraging Python with Tornado web framework for backend
-development, JavaScript for responsive frontend interfaces, and Redis for efficient data storage.
+- Designed and built a dynamic web application to streamline sprint planning, sprint events hosting and progress sharing among team members, leveraging Python with Tornado web framework for backend development, JavaScript for responsive frontend interfaces, and Redis for efficient data storage.
 - Utilized Redis pub/sub for seamless team communication via instant messages.
 - Deployed the application using Docker on Amazon EC2.
 

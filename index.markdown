@@ -11,7 +11,7 @@ title: Home
 
 - <strong>Blogs</strong> includes technical posts documenting my experience and ideas as a developer, focusing on challenges I have encountered in development and steps I took to build viable solutions.
 
-<!-- - <strong>Fun</strong> offers a booster shot for your curiosity. Posts here cover various fun topics such as linguistics, neuroscience, comics, and gardening. Feel free to head over for a dose of fun! -->
+<!-- - <strong>Fun</strong> collects posts on various topics, from Linguistics and neuroscience to reading notes, comics, and gardening logs.-->
 
 ## Projects
 ---

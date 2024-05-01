@@ -6,7 +6,12 @@ title: Projects
 
 # Sprinting: Web-Based Sprint Planning and Collaboration
 
-## Introduction
+<div style="display: flex; margin: 10px auto; justify-content: center;
+"><iframe width="560" height="315" src="https://www.youtube.com/embed/354mPbYTccc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+
+Web Demo: [Sprinting](http://44.203.49.24/sprinting)
+
+Source Code: [![chaoyihu - sprinting](https://img.shields.io/static/v1?label=chaoyihu&message=sprinting&color=blue&logo=github)](https://github.com/chaoyihu/sprinting)
 
 Imagine you're grappling with inefficient team collaboration. Your team members lack a clear understanding of the goal, constantly getting bogged down by distractions and irrelevant tasks.
 
@@ -45,16 +50,13 @@ Initiating the sprint will redirect you to the main event page. Event info is sh
 
 ![sprint page](/assets/images/sprinting-demo-sprint.png)
 
-## Links
-- Source on GitHub: [![chaoyihu - sprinting](https://img.shields.io/static/v1?label=chaoyihu&message=sprinting&color=blue&logo=github)](https://github.com/chaoyihu/sprinting)
-
-<!-- - Project Video: [Create a team sprint]() -->
-
-- Project Demo: [Sprinting](http://44.203.49.24/sprinting)
-> You can use username: testuser and password: pwd to play with the demo, or register your own user.
 
 
 # Vocabbler: Language Learner Helper App
+
+Web Demo: [Vocabbler](http://44.203.49.24/vocabbler)
+
+Source Code: [![chaoyihu - vocabbler](https://img.shields.io/static/v1?label=chaoyihu&message=vocabbler&color=blue&logo=github)](https://github.com/chaoyihu/vocabbler)
 
 Effortlessly organize and review your vocabulary in different languages, and reinforce your learning through engaging quizzes. Whether you're a beginner or an advanced learner, Vocabbler offers a platform to manage and test your linguistic knowledge. 
 
@@ -85,10 +87,3 @@ Clicking on "Quiz Me" will bring you to the quiz page. When prompt, input the nu
 
 ![vocabbler](/assets/images/vocabbler-quiz-page-finish.png)
 
-
-## Links
-- Source on GitHub: [![chaoyihu - vocabbler](https://img.shields.io/static/v1?label=chaoyihu&message=vocabbler&color=blue&logo=github)](https://github.com/chaoyihu/vocabbler)
-
-<!-- - Project Video: [Create a team sprint]() -->
-
-- Project Demo: [Vocabbler](http://44.203.49.24/vocabbler)

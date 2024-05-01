@@ -17,12 +17,13 @@ title: Home
 ---
 <div id="project-pane">
   <div class="project-row">
-    <img src="/assets/images/sprinting-project-cover.png">
+    <img src="/assets/images/sprinting-project-cover.gif">
     <div class="project-headline-box">
         <h3><strong>Sprinting: Web-Based Sprint Planning and Collaboration</strong></h3>
         <p>Sprinting a dynamic web application to streamline sprint planning, sprint events hosting and progress sharing among team members.</p>
         <p><a href="/projects#sprinting-web-based-sprint-planning-and-collaboration">More Details>>></a></p><br>
-        <p><a href="http://44.203.49.24/sprinting" target="_blank">Visit Demo>>></a></p>
+        <p><a href="https://youtu.be/354mPbYTccc">Demo Video>>></a></p><br>
+        <p><a href="http://44.203.49.24/sprinting" target="_blank">Web Demo>>></a></p>
     </div>
   </div>
   <div class="project-row">
@@ -34,7 +35,7 @@ title: Home
           <li>Quiz yourself on what you have studied.</li>
       </ul>
       <p><a href="/projects#vocabbler-language-learner-helper-app">More Details>>></a></p><br>
-      <p><a href="http://44.203.49.24/vocabbler" target="_blank">Visit Demo>>></a></p>
+      <p><a href="http://44.203.49.24/vocabbler" target="_blank">Web Demo>>></a></p>
     </div>
     <img src="/assets/images/vocabbler-words-page.png">
   </div>

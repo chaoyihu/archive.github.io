@@ -1,6 +1,7 @@
 ---
 layout: base
 title: Fun
+permalink: /fun/
 ---
 <h1 class="post-title p-name" itemprop="name headline">Fun! </h1>
 

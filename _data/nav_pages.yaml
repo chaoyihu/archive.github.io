@@ -4,11 +4,11 @@ docs:
 - title: Home
   url: /
 
-- title: Projects
-  url: /projects
-
 - title: Blogs
   url: /blogs
+
+- title: Projects
+  url: /projects
 
 # - title: Fun
 #   url: /fun

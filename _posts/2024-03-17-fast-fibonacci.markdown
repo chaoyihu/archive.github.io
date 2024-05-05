@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Fast Fibonacci"
-date: 2024-04-02
+date: 2024-03-17
 tags: [Math, Algorithm]
 categories: [developer]
 description: "Random topic: How to calculate the Nth fibonacci number in O(logN) time?"

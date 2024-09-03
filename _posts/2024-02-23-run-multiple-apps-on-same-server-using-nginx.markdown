@@ -269,7 +269,4 @@ That's basically it! Now the two applications can be accessed at:
 - http://ec2.public.ip.address/app1
 - http://ec2.public.ip.address/app2
 
-
-An additional benefit of using NGINX is that I do not have to manage ssl certificates separately in my applications - like what I did in [this previous post]({% post_url 2024-02-07-setting-up-secure-communication-protocols-for-dockerized-web-server %}) in development. Instead, NGINX can handle ssl termination. But for now I just link to them using public ip - no domain name nor CA-signed ssl certs configured, and I might work on that some other time.
-
 Thanks for reading! ✨✨
